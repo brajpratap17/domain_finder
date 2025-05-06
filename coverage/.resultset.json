@@ -1,0 +1,223 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/braj/projects/domain_finder/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/channels/application_cable/channel.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/channels/application_cable/connection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/controllers/domains_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17,
+          14,
+          14,
+          14,
+          null,
+          14,
+          9,
+          9,
+          null,
+          3,
+          2,
+          null,
+          1,
+          null,
+          3,
+          null,
+          2,
+          2,
+          null,
+          null,
+          null,
+          14,
+          14,
+          null,
+          14,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          14,
+          14,
+          126,
+          378,
+          378,
+          null,
+          null,
+          null,
+          14,
+          14,
+          null,
+          140,
+          79,
+          79,
+          null,
+          27,
+          23,
+          null,
+          4,
+          null,
+          null,
+          34,
+          null,
+          null,
+          null,
+          3,
+          3,
+          null,
+          null,
+          1,
+          1,
+          null,
+          18,
+          null,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/braj/projects/domain_finder/app/models/domain_checker.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          17,
+          17,
+          17,
+          17,
+          17,
+          null,
+          null,
+          1,
+          16,
+          null,
+          null,
+          1,
+          15,
+          1,
+          1,
+          null,
+          14,
+          1,
+          1,
+          null,
+          13,
+          13,
+          13,
+          null,
+          13,
+          9,
+          9,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          2,
+          2,
+          null,
+          2,
+          2,
+          2,
+          null,
+          9,
+          9,
+          null,
+          null,
+          1,
+          9,
+          9,
+          81,
+          243,
+          243,
+          243,
+          null,
+          null,
+          9,
+          9,
+          null,
+          90,
+          79,
+          79,
+          null,
+          7,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1745964914
+  }
+}

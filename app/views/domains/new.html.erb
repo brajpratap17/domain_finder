@@ -1,0 +1,57 @@
+<div class="domain-finder-container">
+  <h1 class="df-title">Find Available Domain Name</h1>
+  <%= form_with url: check_domains_path, method: :post, local: true, html: {class: 'df-form'} do |form| %>
+    <div class="df-input-group">
+      <%= form.label :domain, "Domain name (e.g. example.com):", class: 'df-label' %>
+      <%= form.text_field :domain, value: params[:domain], class: 'df-input' %>
+    </div>
+    <div class="df-btn-group">
+      <%= form.submit "Check Availability", class: 'df-btn' %>
+    </div>
+  <% end %>
+
+  <% if defined?(@available) && !@available.nil? %>
+    <% if @available %>
+      <div class="df-result df-success">
+        Domain <strong><%= @domain %></strong> is <strong>available</strong>!
+        <%= link_to "Purchase", "https://www.namecheap.com/domains/registration/results/?domain=#{@domain}", class: 'df-purchase-btn', target: '_blank', rel: 'noopener' %>
+      </div>
+    <% else %>
+      <div class="df-result df-error">Domain <strong><%= @domain %></strong> is <strong>taken</strong>.</div>
+    <% end %>
+  <% end %>
+
+  <% if @error %>
+    <div class="df-result df-warning"><%= @error %></div>
+  <% end %>
+
+  <% if @suggestions.present? %>
+    <h2 class="df-suggest-title">Suggestions</h2>
+    <table class="df-table">
+      <tr>
+        <th>Domain</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+      <% @suggestions.each do |sug| %>
+        <tr>
+          <td><%= sug %></td>
+          <td>
+            <% if @suggestion_results[sug] == true %>
+              <span class="df-available">Available</span>
+            <% elsif @suggestion_results[sug] == false %>
+              <span class="df-taken">Taken</span>
+            <% else %>
+              <span class="df-unknown">Error</span>
+            <% end %>
+          </td>
+          <td>
+            <% if @suggestion_results[sug] == true %>
+              <%= link_to "Purchase", "https://www.namecheap.com/domains/registration/results/?domain=#{sug}", class: 'df-purchase-btn', target: '_blank', rel: 'noopener' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+</div>

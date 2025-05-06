@@ -1,0 +1,47 @@
+name: RSpec
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13
+        ports: [5432:5432]
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+        options: >-
+          --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    env:
+      RAILS_ENV: test
+      PGHOST: localhost
+      PGUSER: postgres
+      PGPASSWORD: password
+      DATABASE_URL: postgres://postgres:password@localhost:5432/test_db
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - name: Set up database
+        run: |
+          cp config/database.yml config/database.yml.bak || true
+          sed -i 's/username: .*/username: postgres/' config/database.yml
+          sed -i 's/password: .*/password: password/' config/database.yml
+          sed -i 's/host: .*/host: localhost/' config/database.yml
+          bundle exec rails db:create db:schema:load --trace
+      - name: Run RSpec
+        run: |
+          bundle exec rspec
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: coverage/.resultset.json
+          fail_ci_if_error: false

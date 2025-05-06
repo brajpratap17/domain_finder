@@ -1,0 +1,158 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Domain Finder Modern UI */
+.domain-finder-container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.df-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2a4365;
+}
+.df-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.df-input-group {
+  display: flex;
+  flex-direction: column;
+}
+.df-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.df-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.df-btn-group {
+  display: flex;
+  justify-content: flex-end;
+}
+.df-btn {
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.df-btn:hover {
+  background: #2b6cb0;
+}
+.df-result {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  text-align: center;
+}
+.df-success {
+  background: #e6fffa;
+  color: #276749;
+  border: 1px solid #b2f5ea;
+}
+.df-error {
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+.df-warning {
+  background: #fefcbf;
+  color: #b7791f;
+  border: 1px solid #faf089;
+}
+.df-suggest-title {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2a4365;
+  font-size: 1.25rem;
+  text-align: left;
+}
+.df-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.df-table th, .df-table td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+}
+.df-table th {
+  background: #e2e8f0;
+  color: #2a4365;
+  font-weight: 600;
+}
+.df-table tr:nth-child(even) {
+  background: #edf2f7;
+}
+.df-available {
+  color: #276749;
+  font-weight: bold;
+}
+.df-taken {
+  color: #c53030;
+  font-weight: bold;
+}
+.df-unknown {
+  color: #b7791f;
+  font-weight: bold;
+}
+.df-purchase-btn {
+  display: inline-block;
+  background: #38a169;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(56,161,105,0.08);
+}
+.df-purchase-btn:hover {
+  background: #2f855a;
+  color: #fff !important;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .domain-finder-container {
+    padding: 16px 4px;
+  }
+  .df-title {
+    font-size: 1.3rem;
+  }
+}
